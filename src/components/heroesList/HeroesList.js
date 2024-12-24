@@ -28,7 +28,7 @@ const HeroesList = () => {
 
     const onDelete = (id) => {
         request(`http://localhost:3001/heroes/${id}`, "DELETE")
-        dispatch(heroesDeleted(id));
+        .then(dispatch(heroesDeleted(id)));
     }
 
     if (heroesLoadingStatus === "loading") {

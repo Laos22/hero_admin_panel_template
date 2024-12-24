@@ -17,6 +17,18 @@
       "name": "Морской герой",
       "description": "Как аквамен, но не из DC",
       "element": "water"
+    },
+    {
+      "name": "Случайный герой",
+      "description": "Все что угодно",
+      "element": "earth",
+      "id": "524022e7-36ea-4185-813d-ce819a53cc3a"
+    },
+    {
+      "name": "Супергерой",
+      "description": "Стрелять лазером",
+      "element": "fire",
+      "id": "1b4119c7-de58-47f8-a741-9d7d38b72659"
     }
   ],
   "filters": [
