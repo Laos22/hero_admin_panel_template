@@ -43,17 +43,37 @@
       "id": "7be13e50-5dae-49f0-8ccf-871ba25f5fe1"
     },
     {
-      "name": "aaa",
-      "description": "aaaaaaa",
+      "name": "Hulk",
+      "description": "Destroyed",
       "element": "water",
-      "id": "38a4ad74-6e3f-43b9-b987-64271a81f71b"
+      "id": "79415311-fae8-4698-8fbf-8aafa814eb3d"
     }
   ],
   "filters": [
-    "all",
-    "fire",
-    "water",
-    "wind",
-    "earth"
+    {
+      "name": "all",
+      "label": "Все",
+      "className": "btn-outline-dark"
+    },
+    {
+      "name": "fire",
+      "label": "Огонь",
+      "className": "btn-danger"
+    },
+    {
+      "name": "water",
+      "label": "Вода",
+      "className": "btn-primary"
+    },
+    {
+      "name": "wind",
+      "label": "Ветер",
+      "className": "btn-success"
+    },
+    {
+      "name": "earth",
+      "label": "Земля",
+      "className": "btn-secondary"
+    }
   ]
 }
