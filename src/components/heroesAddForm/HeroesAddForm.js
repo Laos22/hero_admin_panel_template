@@ -44,10 +44,7 @@ const HeroesAddForm = () => {
         }),
         onSubmit: values => {
         //   alert(JSON.stringify(values, null, 2));
-            const id = uuid();
-            const post = {...values, id: id}
-            const res = JSON.stringify(post, null, 2)
-            request(`http://localhost:3001/heroes`, "POST", res)
+            request(`http://localhost:3001/heroes`, "POST", JSON.stringify({...values, id: uuid()}))
                     .then(dispatch(heroAdd(values)));
         },
       });

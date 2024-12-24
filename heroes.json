@@ -29,6 +29,18 @@
       "description": "Стрелять лазером",
       "element": "fire",
       "id": "1b4119c7-de58-47f8-a741-9d7d38b72659"
+    },
+    {
+      "name": "Backster",
+      "description": "AnySink",
+      "element": "earth",
+      "id": "34c289d0-274a-47c5-ad13-5ae44d60cc36"
+    },
+    {
+      "name": "Spiderman",
+      "description": "HetShot",
+      "element": "wind",
+      "id": "7be13e50-5dae-49f0-8ccf-871ba25f5fe1"
     }
   ],
   "filters": [
