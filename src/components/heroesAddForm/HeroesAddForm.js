@@ -43,9 +43,10 @@ const HeroesAddForm = () => {
             element: Yup.string().required('Required')
         }),
         onSubmit: values => {
+            const id = uuid();
         //   alert(JSON.stringify(values, null, 2));
-            request(`http://localhost:3001/heroes`, "POST", JSON.stringify({...values, id: uuid()}))
-                    .then(dispatch(heroAdd(values)));
+            request(`http://localhost:3001/heroes`, "POST", JSON.stringify({...values, id: id}))
+                    .then(dispatch(heroAdd({...values, id: id}))).finally(formik.resetForm());
         },
       });
 
@@ -80,7 +81,7 @@ const HeroesAddForm = () => {
                     style={{"height": '130px'}}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    value={formik.values.firstName}
+                    value={formik.values.description}
                 />
                 {formik.touched.description && formik.errors.description ? (<div>{formik.errors.description}</div>) : null}
             </div>
