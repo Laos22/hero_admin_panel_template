@@ -18,7 +18,6 @@ const HeroesFilters = () => {
     const filters = useSelector(state => state.filters);
     const activeFilter = useSelector(state => state.activeFilter);
 
-
     useEffect(() => {
         request("http://localhost:3001/filters")
             .then(data => dispatch(filterFetched(data)))
@@ -29,13 +28,10 @@ const HeroesFilters = () => {
     const onClick = (name) => {
         console.log(name)
         dispatch(changeActiveFilter(name))
-
     }
 
     const btnList = filters.map(item => {
-        
         const clazz = activeFilter === item.name ? `btn ${item.className}` : `btn ${item.className} active`;
-
         return <button className={clazz} key={item.name} onClick={() => onClick(item.name)}>{item.label}</button>;
     })
 
@@ -45,11 +41,6 @@ const HeroesFilters = () => {
                 <p className="card-text">Отфильтруйте героев по элементам</p>
                 <div className="btn-group">
                     {btnList}
-                    {/* <button className="btn btn-outline-dark active">Все</button>
-                    <button className="btn btn-danger">Огонь</button>
-                    <button className="btn btn-primary">Вода</button>
-                    <button className="btn btn-success">Ветер</button>
-                    <button className="btn btn-secondary">Земля</button> */}
                 </div>
             </div>
         </div>

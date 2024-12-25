@@ -14,6 +14,7 @@ import Spinner from '../spinner/Spinner';
 const HeroesList = () => {
     const heroes = useSelector(state => state.heroes);
     const heroesLoadingStatus = useSelector(state => state.heroesLoadingStatus);
+    const activeFilter = useSelector(state => state.activeFilter);
     const dispatch = useDispatch();
     const {request} = useHttp();
 
@@ -41,6 +42,14 @@ const HeroesList = () => {
     const renderHeroesList = (arr) => {
         if (arr.length === 0) {
             return <h5 className="text-center mt-5">Героев пока нет</h5>
+        }
+
+        if (activeFilter && activeFilter !== "all")  {
+            console.log("filter")
+            return arr.map(({id, element, ...props}) => {
+
+                if (activeFilter === element) return <HeroesListItem key={id} {...props} element={element} onDelete={() => onDelete(id)}/>
+            })
         }
 
         return arr.map(({id, ...props}) => {

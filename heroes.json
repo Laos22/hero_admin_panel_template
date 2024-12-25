@@ -47,6 +47,12 @@
       "description": "Destroyed",
       "element": "water",
       "id": "79415311-fae8-4698-8fbf-8aafa814eb3d"
+    },
+    {
+      "name": "Земля",
+      "description": "Земля",
+      "element": "earth",
+      "id": "68ae803d-5be3-4562-ac91-ae0426127121"
     }
   ],
   "filters": [
