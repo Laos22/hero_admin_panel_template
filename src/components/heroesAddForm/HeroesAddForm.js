@@ -24,7 +24,7 @@ import * as Yup from 'yup';
 const HeroesAddForm = () => {
     const dispatch = useDispatch();
     const {request} = useHttp();
-    const {filters} = useSelector(state => state);
+    const filters = useSelector(state => state.filters);
 
 
     useEffect(() => {
@@ -112,10 +112,10 @@ const HeroesAddForm = () => {
                     value={formik.values.element}
                     >
 
-                    {formik.touched.element && formik.errors.element ? (<div style={{"color": 'red'}}>{formik.errors.element}</div>) : null}
                     <option value=''>Я владею элементом...</option>
                     {list}
                 </select>
+                    {formik.touched.element && formik.errors.element ? (<div style={{"color": 'red'}}>{formik.errors.element}</div>) : null}
             </div>
 
             <button type="submit" className="btn btn-primary">Создать</button>

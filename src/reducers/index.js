@@ -38,6 +38,11 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 filters: action.payload
             }
+        case 'CHANGE_ACTIVE_FILTER':
+            return {
+                ...state,
+                activeFilter: action.payload
+            }
         default: return state
     }
 }

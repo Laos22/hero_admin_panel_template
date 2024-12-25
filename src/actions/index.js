@@ -34,3 +34,9 @@ export const filterFetched = (filters) => {
         payload: filters
     }
 }
+export const changeActiveFilter = (name) => {
+    return {
+        type: 'CHANGE_ACTIVE_FILTER',
+        payload: name
+    }
+}
